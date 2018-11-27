@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>星星插件</title>
+		<style>
+			#maxdiv {
+				width: 500px;
+				height: 500px;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			
+			
+			#halfStartDiv {
+				position: relative;
+				background: url(img/stark2.png);
+				height: 21px;
+			}
+			
+			#halfStartDiv a {
+				height: 21px;
+				position: absolute;
+			}
+			
+			#halfStartDiv a:hover {
+				cursor: pointer;
+				background: url(img/stars2.png);
+			}
+			span{
+				color: crimson;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="maxdiv">
+			<h3>一颗星评分</h3>
+			<div id="OneStartDiv"></div>您的评分:<span id="onescore"></span>分
+			<h3>半颗星评分</h3>
+			<div id="halfStartDiv"></div>您的评分:<span id="halfscore"></span>分
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/JQuery-starplugin-1.0.min.js"></script>
+	<script>
+		/*$("#OneStartDiv").setOneStar({
+			num: 5,
+			obj: $("#OneStartDiv"),
+			objcounter: $("#onescore"),
+			callback: function(msg) {
+				alert(msg);
+			}
+		});*/
+
+		$("#halfStartDiv").setHalfStar({
+			num: 10,
+			obj: $("#halfStartDiv"),
+			objcounter: $("#halfscore"),
+			callback: function(msg) {
+				alert(msg);
+			}
+		})
+	</script>
+
+</html>
